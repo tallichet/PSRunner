@@ -1,4 +1,5 @@
 using GalaSoft.MvvmLight;
+using PSRunner.Services;
 
 namespace PSRunner.ViewModel
 {
@@ -16,19 +17,14 @@ namespace PSRunner.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
+        private readonly IPowershell _psRunner;
+
         /// <summary>
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
-        public MainViewModel()
+        public MainViewModel(Services.IPowershell psRunner)
         {
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+            _psRunner = psRunner;
         }
     }
 }

@@ -42,6 +42,7 @@ namespace PSRunner.ViewModel
             ////    SimpleIoc.Default.Register<IDataService, DataService>();
             ////}
 
+            SimpleIoc.Default.Register<Services.IPowershell, Services.PowershellRunner>();
             SimpleIoc.Default.Register<MainViewModel>();
         }
 
